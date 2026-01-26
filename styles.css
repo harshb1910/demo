@@ -1,0 +1,108 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #0b0d17;
+  color: #eef1ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1a2040, #05060c 65%);
+}
+
+.page {
+  width: min(900px, 95vw);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.hud__title {
+  font-size: 1.35rem;
+}
+
+.hud__score {
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+}
+
+.game-shell {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  background: linear-gradient(180deg, #101530 0%, #0d0f1f 70%, #070810 100%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(6, 8, 20, 0.85);
+  gap: 0.8rem;
+}
+
+.overlay--hidden {
+  display: none;
+}
+
+.key {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.start {
+  background: #6b7cff;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(107, 124, 255, 0.45);
+}
+
+.tips {
+  text-align: center;
+  opacity: 0.8;
+}
+
+.tips strong {
+  color: #9aa8ff;
+}
